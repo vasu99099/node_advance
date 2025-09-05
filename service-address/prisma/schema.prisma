@@ -1,0 +1,29 @@
+datasource db {
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Address {
+  id           String   @id @default(cuid())
+  userId       String   @map("user_id") // Reference to Auth Service
+  type         String // 'shipping' or 'billing'
+  firstName    String   @map("first_name")
+  lastName     String   @map("last_name")
+  addressLine1 String   @map("address_line_1")
+  addressLine2 String?  @map("address_line_2")
+  city         String
+  state        String
+  postalCode   String   @map("postal_code")
+  country      String   @default("India")
+  isDefault    Boolean  @default(false) @map("is_default")
+  deletedAt    DateTime? @map("deleted_at")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  @@map("addresses")
+}
