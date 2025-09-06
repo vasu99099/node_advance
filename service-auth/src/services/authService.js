@@ -9,6 +9,22 @@ class UserService {
     this.userRepository = new UserRepository();
   }
 
+  async createSsoUser(userData) {
+    const { ssoId, email, role, firstName, lastName } = userData;
+    const existingUser = await this.userRepository.findByEmail(email);
+    if (existingUser) {
+      return await this.updateUser(existingUser.id, { ssoId });
+    }
+    const user = this.userRepository.create({
+      ssoId,
+      email: email.toLowerCase(),
+      passwordHash: null,
+      firstName,
+      lastName,
+    });
+    return user;
+  }
+
   async createUser(userData) {
     const { email, password, role, firstName, lastName, phone } = userData;
 
@@ -33,13 +49,13 @@ class UserService {
 
     // Publish event for other services
 
-    await publish("user.registered", {
-      userId: user.id,
-      email: user.email,
-      role: user.role,
-      firstName: user.firstName,
-      lastName: user.lastName,
-    });
+    // await publish("user.registered", {
+    //   userId: user.id,
+    //   email: user.email,
+    //   role: user.role,
+    //   firstName: user.firstName,
+    //   lastName: user.lastName,
+    // });
 
     return user;
   }
@@ -54,6 +70,13 @@ class UserService {
     const isPasswordValid = await bcrypt.compare(password, user.passwordHash);
     if (!isPasswordValid) {
       throw new AppError("Invalid credentials", 401);
+    }
+    if (user.mfaEnabled) {
+      // Ask for OTP
+      throw new AppError("MFA Required", 401, {
+        mfaRequired: true,
+        userId: user.id,
+      });
     }
 
     // Generate JWT token
@@ -91,6 +114,10 @@ class UserService {
     return user;
   }
 
+  async getUserBySsoId(id) {
+    const user = await this.userRepository.findBySsoId(id);
+    return user;
+  }
   async updateUser(id, userData) {
     const existingUser = await this.userRepository.findById(id);
     if (!existingUser) {

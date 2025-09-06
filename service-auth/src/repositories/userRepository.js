@@ -29,6 +29,8 @@ class UserRepository {
         lastName: true,
         phone: true,
         isActive: true,
+        mfaEnabled: true,
+        mfaSecret: true,
         createdAt: true,
         updatedAt: true,
       },
@@ -46,13 +48,34 @@ class UserRepository {
         firstName: true,
         lastName: true,
         phone: true,
+        mfaEnabled: true,
+        mfaSecret: true,
         isActive: true,
         createdAt: true,
         updatedAt: true,
       },
     });
   }
-
+  async findBySsoId(ssoId) {
+    return await prisma.user.findUnique({
+      where: { ssoId },
+      select: {
+        id: true,
+        email: true,
+        passwordHash: true,
+        role: true,
+        firstName: true,
+        lastName: true,
+        phone: true,
+        mfaEnabled: true,
+        mfaSecret: true,
+        ssoId: true,
+        isActive: true,
+        createdAt: true,
+        updatedAt: true,
+      },
+    });
+  }
   async findAll(filters = {}) {
     const { page = 1, limit = 10, role, isActive, search } = filters;
 
