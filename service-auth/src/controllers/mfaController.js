@@ -1,86 +1,77 @@
 import { authenticator } from "otplib";
 import UserService from "../services/authService.js";
 import QRCode from "qrcode";
+import PasswordFactory from "../utils/PasswordFactory.js";
+import ResponseHelper from "../utils/ResponseHelper.js";
 
 export const setupMFA = async (req, res) => {
   try {
-    const userId = req.body.userId; // assume user is logged in
+    const userId = req.userId;
     const user = await UserService.getUserById(userId);
-    if (!user) return res.status(404).json({ message: "User not found" });
+    if (!user) return ResponseHelper.error(res, "User not found", 404);
 
-    // Generate secret
     const secret = authenticator.generateSecret();
-
-    // Generate otpauth URL
     const otpauth = authenticator.keyuri(user.email, "MyApp", secret);
-
-    // Convert to QR image
     const qrImageUrl = await QRCode.toDataURL(otpauth);
-
-    // Save temp secret (not yet active until user confirms OTP)
 
     await UserService.updateUser(userId, { mfaSecret: secret });
 
-    res.json({
-      message: "Scan this QR code with Google Authenticator",
+    ResponseHelper.success(res, {
       qrImageUrl,
-      secret, // (optional: usually don’t send secret to frontend)
-    });
+      secret
+    }, "Scan this QR code with Google Authenticator");
   } catch (err) {
-    res.status(401).json({ error: err.message });
+    ResponseHelper.error(res, err.message, 401);
   }
 };
 
 export const verifyMFA = async (req, res) => {
   try {
-    const { userId, token } = req.body;
+    const { token } = req.body;
+    const userId = req.userId;
 
     const user = await UserService.getUserById(userId);
-    console.log("user", user);
     if (!user || !user.mfaSecret) {
-      return res.status(400).json({ message: "No MFA setup in progress" });
+      return ResponseHelper.error(res, "No MFA setup in progress", 400);
     }
 
     const isValid = authenticator.check(token, user.mfaSecret, { window: 1 });
-    console.log("isValid", token);
     if (!isValid) {
-      return res.status(400).json({ message: "Invalid OTP token" });
+      return ResponseHelper.error(res, "Invalid OTP token", 400);
     }
 
-    // OTP valid → activate MFA
     await UserService.updateUser(userId, {
       mfaEnabled: true,
     });
 
-    res.json({ message: "MFA activated successfully" });
+    ResponseHelper.success(res, null, "MFA activated successfully");
   } catch (err) {
-    res.status(401).json({ error: err.message });
+    ResponseHelper.error(res, err.message, 401);
   }
 };
 
 export const disableMFA = async (req, res) => {
   try {
-    const { userId, password } = req.body;
-    // optionally ask for password confirmation for security
+    const { password } = req.body;
+    const userId = req.userId;
 
     const user = await UserService.getUserById(userId);
     if (!user) {
-      return res.status(404).json({ message: "User not found" });
+      return ResponseHelper.error(res, "User not found", 404);
     }
 
-    // (optional) verify password before disabling MFA
-    const isMatch = await bcrypt.compare(password, user.password);
+    const isMatch = await PasswordFactory.compare(password, user.passwordHash);
     if (!isMatch) {
-      return res.status(400).json({ message: "Invalid password" });
+      return ResponseHelper.error(res, "Invalid password", 400);
     }
 
-    // Disable MFA
-    user.mfaSecret = null;
-    user.mfaEnabled = false;
-    await user.save();
+    await UserService.updateUser(userId, {
+      mfaSecret: null,
+      mfaEnabled: false
+    });
 
-    res.json({ message: "MFA disabled successfully" });
+    ResponseHelper.success(res, null, "MFA disabled successfully");
   } catch (err) {
-    res.status(401).json({ error: err.message });
+    ResponseHelper.error(res, err.message, 401);
   }
 };

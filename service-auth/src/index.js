@@ -1,45 +1,44 @@
 import express from "express";
-import dotenv from "dotenv";
-import passport from "passport";
+import AppConfig from "./config/AppConfig.js";
+import PassportConfig from "./config/PassportConfig.js";
 import indexRoutes from "./routes/index.js";
-import { Strategy as GoogleStrategy } from "passport-google-oauth20";
-import UserService from "./services/authService.js";
-dotenv.config();
+
 const app = express();
+const config = AppConfig.loadConfig();
+
+// Validate configuration
+AppConfig.validateConfig();
+
+// Middleware
 app.use(express.json());
 
-// Routes
-passport.use(
-  new GoogleStrategy(
-    {
-      clientID: process.env.GOOGLE_AUTH_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_AUTH_SECRET,
-      callbackURL: "/auth/google/callback",
-    },
-    async (accessToken, refreshToken, profile, done) => {
-      try {
-        console.log("profile", profile);
-        let user = await UserService.getUserBySsoId(profile.id);
-        if (!user) {
-          user = await UserService.createSsoUser({
-            ssoId: profile.id,
-            email: profile.emails[0].value,
-            firstName: profile.name.givenName,
-            lastName: profile.name.familyName,
-          });
-        }
-        return done(null, user);
-      } catch (err) {
-        return done(err);
-      }
-    },
-  ),
-);
+// Initialize Passport
+const passport = PassportConfig.initialize();
 app.use(passport.initialize());
 
+// Routes
 app.use(indexRoutes);
 
-const PORT = process.env.PORT || 4001;
-app.listen(PORT, () => {
-  console.log(`${process.env.SERVICE_NAME} running on port ${PORT}`);
+// 404 handler
+app.use((req, res, next) => {
+  res.status(404).json({
+    success: false,
+    message: "Route not found",
+  });
 });
+
+// Error handler
+app.use((err, req, res, next) => {
+  res.status(err.statusCode || 500).json({
+    success: false,
+    message: err.message || "Internal server error",
+  });
+});
+
+const server = app.listen(config.server.port, () => {
+  console.log(
+    `${config.server.serviceName} running on port ${config.server.port}`,
+  );
+});
+
+export default server;

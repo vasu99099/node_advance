@@ -1,13 +1,15 @@
 import { authenticator } from "otplib";
 import UserService from "../services/authService.js";
-import jwt from "jsonwebtoken";
+import TokenFactory from "../utils/TokenFactory.js";
+import ResponseHelper from "../utils/ResponseHelper.js";
 
 export const registerUser = async (req, res) => {
   try {
+    console.log("user reached");
     const user = await UserService.createUser(req.body);
-    res.status(201).json({ message: "User registered", user });
+    ResponseHelper.success(res, user, "User registered successfully", 201);
   } catch (err) {
-    res.status(400).json({ error: err.message });
+    ResponseHelper.error(res, err.message, 400);
   }
 };
 
@@ -15,9 +17,9 @@ export const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
     const result = await UserService.loginUser(email, password);
-    res.json(result);
+    ResponseHelper.success(res, result, "Login successful");
   } catch (err) {
-    res.status(401).json({ error: err.message });
+    ResponseHelper.error(res, err.message, 401);
   }
 };
 
@@ -26,45 +28,49 @@ export const verify2fa = async (req, res) => {
     const { userId, token } = req.body;
     const user = await UserService.getUserById(userId);
     if (!user || !user.mfaEnabled) {
-      return res.status(400).json({ message: "Invalid request" });
+      return ResponseHelper.error(res, "Invalid request", 400);
     }
 
     const isValid = authenticator.check(token, user.mfaSecret, { window: 1 });
 
     if (!isValid) {
-      return res.status(400).json({ message: "Invalid 2FA token" });
+      return ResponseHelper.error(res, "Invalid 2FA token", 400);
     }
-    const jwtToken = jwt.sign(
-      {
-        userId: user.id,
-        email: user.email,
-        role: user.role,
-      },
-      process.env.JWT_SECRET,
-      { expiresIn: process.env.JWT_EXPIRE || "7d" },
-    );
+    const jwtToken = TokenFactory.generateJWT({
+      userId: user.id,
+      role: user.role,
+      email: user.email,
+    });
 
     const { passwordHash, ...userWithoutPassword } = user;
 
-    res.send({
-      user: userWithoutPassword,
-      token: jwtToken,
-    });
+    ResponseHelper.success(
+      res,
+      {
+        user: userWithoutPassword,
+        token: jwtToken,
+      },
+      "2FA verification successful",
+    );
   } catch (err) {
-    res.status(401).json({ error: err.message });
+    ResponseHelper.error(res, err.message, 401);
   }
 };
 
 export const generateJWT = (req, res) => {
-  const user = req.user;
-  const jwtToken = jwt.sign(
-    {
+  try {
+    const user = req.user;
+    const jwtToken = TokenFactory.generateJWT({
       userId: user.id,
-      email: user.email,
       role: user.role,
-    },
-    process.env.JWT_SECRET,
-    { expiresIn: process.env.JWT_EXPIRE || "7d" },
-  );
-  res.json({ token: jwtToken });
+      email: user.email,
+    });
+    ResponseHelper.success(
+      res,
+      { token: jwtToken },
+      "Token generated successfully",
+    );
+  } catch (err) {
+    ResponseHelper.error(res, err.message, 500);
+  }
 };

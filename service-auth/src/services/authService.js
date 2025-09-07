@@ -1,5 +1,5 @@
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
+import PasswordFactory from "../utils/PasswordFactory.js";
+import TokenFactory from "../utils/TokenFactory.js";
 import { AppError } from "../utils/error.js";
 import UserRepository from "../repositories/userRepository.js";
 import { publish } from "../events/producer.js";
@@ -35,7 +35,7 @@ class UserService {
     }
 
     // Hash password
-    const passwordHash = await bcrypt.hash(password, 12);
+    const passwordHash = await PasswordFactory.hash(password);
 
     // Create user
     const user = await this.userRepository.create({
@@ -67,7 +67,10 @@ class UserService {
       throw new AppError("Invalid credentials", 401);
     }
 
-    const isPasswordValid = await bcrypt.compare(password, user.passwordHash);
+    const isPasswordValid = await PasswordFactory.compare(
+      password,
+      user.passwordHash,
+    );
     if (!isPasswordValid) {
       throw new AppError("Invalid credentials", 401);
     }
@@ -80,15 +83,11 @@ class UserService {
     }
 
     // Generate JWT token
-    const token = jwt.sign(
-      {
-        userId: user.id,
-        email: user.email,
-        role: user.role,
-      },
-      process.env.JWT_SECRET,
-      { expiresIn: process.env.JWT_EXPIRE || "7d" },
-    );
+    const token = TokenFactory.generateJWT({
+      userId: user.id,
+      role: user.role,
+      email: user.email,
+    });
 
     // // Publish login event
     // await publishEvent("UserLoggedIn", {
@@ -175,7 +174,7 @@ class UserService {
       throw new AppError("User not found", 404);
     }
 
-    const isCurrentPasswordValid = await bcrypt.compare(
+    const isCurrentPasswordValid = await PasswordFactory.compare(
       currentPassword,
       user.passwordHash,
     );
@@ -183,7 +182,7 @@ class UserService {
       throw new AppError("Current password is incorrect", 400);
     }
 
-    const newPasswordHash = await bcrypt.hash(newPassword, 12);
+    const newPasswordHash = await PasswordFactory.hash(newPassword);
     await this.userRepository.updatePassword(id, newPasswordHash);
 
     // Publish password change event

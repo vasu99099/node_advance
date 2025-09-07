@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  api-gateway:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - JWT_SECRET=${JWT_SECRET:-your-super-secret-jwt-key}
+      - AUTH_SERVICE_URL=http://auth-service:4001
+      - ADDRESS_SERVICE_URL=http://address-service:4005
+      - INVENTORY_SERVICE_URL=http://inventory-service:4002
+      - ORDER_SERVICE_URL=http://order-service:4003
+      - NOTIFICATION_SERVICE_URL=http://notification-service:4004
+      - ALLOWED_ORIGINS=http://localhost:3000,http://localhost:3001
+      - LOG_LEVEL=info
+    volumes:
+      - ./logs:/usr/src/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - microservices
+
+networks:
+  microservices:
+    driver: bridge

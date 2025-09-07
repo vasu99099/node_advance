@@ -1,0 +1,319 @@
+{"timestamp":"2025-09-06T16:31:17.250Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:31:17.267Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:31:17.268Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:31:17.269Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:31:17.270Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:31:17.274Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:31:17.391Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:31:36.087Z","level":"info","service":"auth","message":"Proxying request","method":"GET","url":"/auth/auth/google","target":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:31:36.096Z","level":"info","service":"auth","message":"Proxy response","status":404,"url":"/auth/auth/google"}
+{"timestamp":"2025-09-06T16:31:36.101Z","level":"info","service":"middleware-factory","message":"Request completed","method":"GET","url":"/auth/auth/google","status":404,"duration":34,"ip":"127.0.0.1","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome"}
+{"timestamp":"2025-09-06T16:31:36.183Z","level":"warn","service":"api-gateway","message":"Route not found","url":"/.well-known/appspecific/com.chrome.devtools.json"}
+{"timestamp":"2025-09-06T16:31:36.196Z","level":"info","service":"middleware-factory","message":"Request completed","method":"GET","url":"/","status":404,"duration":14,"ip":"127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Sa"}
+{"timestamp":"2025-09-06T16:31:42.324Z","level":"warn","service":"api-gateway","message":"Route not found","url":"//google"}
+{"timestamp":"2025-09-06T16:31:42.327Z","level":"info","service":"middleware-factory","message":"Request completed","method":"GET","url":"/","status":404,"duration":3,"ip":"127.0.0.1","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome"}
+{"timestamp":"2025-09-06T16:31:42.367Z","level":"warn","service":"api-gateway","message":"Route not found","url":"/.well-known/appspecific/com.chrome.devtools.json"}
+{"timestamp":"2025-09-06T16:31:42.376Z","level":"info","service":"middleware-factory","message":"Request completed","method":"GET","url":"/","status":404,"duration":9,"ip":"127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Sa"}
+{"timestamp":"2025-09-06T16:31:46.537Z","level":"info","service":"auth","message":"Proxying request","method":"GET","url":"/auth/auth/google","target":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:31:46.543Z","level":"info","service":"auth","message":"Proxy response","status":404,"url":"/auth/auth/google"}
+{"timestamp":"2025-09-06T16:31:46.547Z","level":"info","service":"middleware-factory","message":"Request completed","method":"GET","url":"/auth/auth/google","status":404,"duration":14,"ip":"127.0.0.1","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome"}
+{"timestamp":"2025-09-06T16:31:46.610Z","level":"warn","service":"api-gateway","message":"Route not found","url":"/.well-known/appspecific/com.chrome.devtools.json"}
+{"timestamp":"2025-09-06T16:31:46.613Z","level":"info","service":"middleware-factory","message":"Request completed","method":"GET","url":"/","status":404,"duration":2,"ip":"127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Sa"}
+{"timestamp":"2025-09-06T16:32:09.925Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:32:09.944Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:32:09.948Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:32:09.950Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:32:09.951Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:32:09.952Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:32:10.075Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:32:12.232Z","level":"info","service":"auth","message":"Proxying request","method":"GET","url":"//auth/google","target":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:32:12.242Z","level":"info","service":"auth","message":"Proxy response","status":302,"url":"//auth/google"}
+{"timestamp":"2025-09-06T16:32:12.246Z","level":"info","service":"middleware-factory","message":"Request completed","method":"GET","url":"//auth/google","status":302,"duration":34,"ip":"127.0.0.1","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome"}
+{"timestamp":"2025-09-06T16:42:47.990Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:42:48.003Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:42:48.004Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:42:48.006Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:42:48.007Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:42:48.008Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:42:48.124Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:43:14.363Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:43:14.372Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:43:14.372Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:43:14.373Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:43:14.374Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:43:14.375Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:43:14.440Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:43:16.543Z","level":"info","service":"auth","message":"Checking service health","url":"http://localhost:4001/health"}
+{"timestamp":"2025-09-06T16:43:16.645Z","level":"info","service":"address","message":"Checking service health","url":"http://localhost:4005/health"}
+{"timestamp":"2025-09-06T16:43:16.665Z","level":"info","service":"inventory","message":"Checking service health","url":"http://localhost:4002/health"}
+{"timestamp":"2025-09-06T16:43:16.681Z","level":"info","service":"order","message":"Checking service health","url":"http://localhost:4003/health"}
+{"timestamp":"2025-09-06T16:43:16.704Z","level":"info","service":"notification","message":"Checking service health","url":"http://localhost:4004/health"}
+{"timestamp":"2025-09-06T16:43:16.779Z","level":"error","service":"address","message":"Service health check error","error":"fetch failed","type":"TypeError"}
+{"timestamp":"2025-09-06T16:43:16.794Z","level":"error","service":"inventory","message":"Service health check error","error":"fetch failed","type":"TypeError"}
+{"timestamp":"2025-09-06T16:43:16.827Z","level":"error","service":"order","message":"Service health check error","error":"fetch failed","type":"TypeError"}
+{"timestamp":"2025-09-06T16:43:16.838Z","level":"error","service":"notification","message":"Service health check error","error":"fetch failed","type":"TypeError"}
+{"timestamp":"2025-09-06T16:43:16.977Z","level":"info","service":"auth","message":"Service health check passed","status":200}
+{"timestamp":"2025-09-06T16:43:16.998Z","level":"info","service":"middleware-factory","message":"Request completed","method":"GET","url":"/health/services","status":503,"duration":455,"ip":"127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Sa"}
+{"timestamp":"2025-09-06T16:43:32.260Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:43:32.272Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:43:32.273Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:43:32.274Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:43:32.274Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:43:32.276Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:43:32.345Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:44:01.892Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:44:01.903Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:44:01.903Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:44:01.905Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:44:01.905Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:44:01.907Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:44:01.970Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:44:07.466Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:44:07.476Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:44:07.477Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:44:07.478Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:44:07.479Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:44:07.480Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:44:07.542Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:44:42.821Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:44:42.837Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:44:42.837Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:44:42.838Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:44:42.839Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:44:42.840Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:44:42.923Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:44:48.451Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:44:48.463Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:44:48.465Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:44:48.466Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:44:48.467Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:44:48.468Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:44:48.529Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:44:56.733Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:44:56.742Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:44:56.743Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:44:56.745Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:44:56.746Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:44:56.747Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:44:56.822Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:45:02.681Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:45:02.691Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:45:02.692Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:45:02.693Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:45:02.694Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:45:02.695Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:45:02.762Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:45:08.244Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:45:08.254Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:45:08.255Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:45:08.255Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:45:08.256Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:45:08.257Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:45:08.319Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:45:24.545Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:45:24.561Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:45:24.564Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:45:24.565Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:45:24.566Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:45:24.568Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:45:24.694Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:45:32.271Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:45:32.280Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:45:32.280Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:45:32.281Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:45:32.282Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:45:32.283Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:45:32.355Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:45:39.975Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:45:39.999Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:45:40.000Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:45:40.002Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:45:40.003Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:45:40.004Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:45:40.121Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:45:47.009Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:45:47.020Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:45:47.022Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:45:47.023Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:45:47.023Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:45:47.024Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:45:47.102Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:45:54.741Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:45:54.751Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:45:54.752Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:45:54.753Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:45:54.754Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:45:54.754Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:45:54.827Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:45:59.057Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:45:59.070Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:45:59.071Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:45:59.072Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:45:59.072Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:45:59.073Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:45:59.249Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:46:31.249Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:46:31.261Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:46:31.262Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:46:31.263Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:46:31.263Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:46:31.264Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:46:31.345Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:46:37.604Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:46:37.617Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:46:37.619Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:46:37.620Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:46:37.620Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:46:37.621Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:46:37.708Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:50:30.415Z","level":"info","service":"auth","message":"Checking service health","url":"http://localhost:4001/health"}
+{"timestamp":"2025-09-06T16:50:30.453Z","level":"info","service":"address","message":"Checking service health","url":"http://localhost:4005/health"}
+{"timestamp":"2025-09-06T16:50:30.455Z","level":"info","service":"inventory","message":"Checking service health","url":"http://localhost:4002/health"}
+{"timestamp":"2025-09-06T16:50:30.459Z","level":"info","service":"order","message":"Checking service health","url":"http://localhost:4003/health"}
+{"timestamp":"2025-09-06T16:50:30.462Z","level":"info","service":"notification","message":"Checking service health","url":"http://localhost:4004/health"}
+{"timestamp":"2025-09-06T16:50:30.474Z","level":"error","service":"address","message":"Service health check error","error":"fetch failed","type":"TypeError"}
+{"timestamp":"2025-09-06T16:50:30.476Z","level":"error","service":"inventory","message":"Service health check error","error":"fetch failed","type":"TypeError"}
+{"timestamp":"2025-09-06T16:50:30.478Z","level":"error","service":"order","message":"Service health check error","error":"fetch failed","type":"TypeError"}
+{"timestamp":"2025-09-06T16:50:30.479Z","level":"error","service":"notification","message":"Service health check error","error":"fetch failed","type":"TypeError"}
+{"timestamp":"2025-09-06T16:50:30.502Z","level":"info","service":"auth","message":"Service health check passed","status":200}
+{"timestamp":"2025-09-06T16:50:30.509Z","level":"info","service":"middleware-factory","message":"Request completed","method":"GET","url":"/services","status":503,"duration":95,"ip":"127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Sa"}
+{"timestamp":"2025-09-06T16:59:05.491Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:59:05.499Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:59:05.500Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:59:05.501Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:59:05.502Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:59:05.502Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:59:05.582Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T16:59:25.018Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T16:59:25.028Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T16:59:25.028Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T16:59:25.029Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T16:59:25.030Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T16:59:25.031Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T16:59:25.108Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T17:06:20.517Z","level":"info","service":"auth","message":"Proxying request","method":"POST","url":"/auth/register","target":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:07:19.360Z","level":"info","service":"auth","message":"Proxying request","method":"POST","url":"/auth/register","target":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:08:55.273Z","level":"info","service":"auth","message":"Proxying request","method":"POST","url":"/auth/register","target":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:09:51.156Z","level":"info","service":"auth","message":"Proxying request","method":"POST","url":"/auth/register","target":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:10:52.953Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T17:10:52.967Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:10:52.968Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T17:10:52.969Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T17:10:52.970Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T17:10:52.971Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T17:10:53.107Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T17:11:11.062Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T17:11:11.073Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:11:11.076Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T17:11:11.078Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T17:11:11.079Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T17:11:11.080Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T17:11:11.169Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T17:11:19.693Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T17:11:19.711Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:11:19.712Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T17:11:19.712Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T17:11:19.713Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T17:11:19.714Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T17:11:19.808Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T17:11:40.043Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T17:11:40.054Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:11:40.055Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T17:11:40.058Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T17:11:40.059Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T17:11:40.060Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T17:11:40.139Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T17:11:51.282Z","level":"info","service":"auth","message":"Proxying request","method":"POST","url":"/auth/register","target":"http://localhost:4001","proxyPath":"/auth/register"}
+{"timestamp":"2025-09-06T17:12:41.030Z","level":"info","service":"auth","message":"Proxying request","method":"POST","url":"/auth/register","target":"http://localhost:4001","proxyPath":"/auth/register"}
+{"timestamp":"2025-09-06T17:13:20.944Z","level":"info","service":"auth","message":"Proxying request","method":"POST","url":"/auth/auth/register","target":"http://localhost:4001","proxyPath":"/auth/auth/register"}
+{"timestamp":"2025-09-06T17:14:16.487Z","level":"info","service":"auth","message":"Proxying request","method":"POST","url":"/auth/auth/register","target":"http://localhost:4001","proxyPath":"/auth/auth/register"}
+{"timestamp":"2025-09-06T17:15:21.433Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T17:15:21.446Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:15:21.446Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T17:15:21.448Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T17:15:21.448Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T17:15:21.449Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T17:15:21.541Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T17:17:40.021Z","level":"info","service":"middleware-factory","message":"Request completed","method":"POST","url":"/test","status":500,"duration":4,"ip":"127.0.0.1","userAgent":"PostmanRuntime/7.45.0"}
+{"timestamp":"2025-09-06T17:20:06.080Z","level":"info","service":"middleware-factory","message":"Request completed","method":"POST","url":"/auth/register","status":503,"duration":9427,"ip":"127.0.0.1","userAgent":"PostmanRuntime/7.45.0"}
+{"timestamp":"2025-09-06T17:20:55.890Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T17:20:55.898Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:20:55.899Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T17:20:55.900Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T17:20:55.900Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T17:20:55.901Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T17:20:55.989Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T17:21:07.218Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T17:21:07.232Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:21:07.234Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T17:21:07.236Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T17:21:07.238Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T17:21:07.239Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T17:21:07.341Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T17:22:18.969Z","level":"info","service":"middleware-factory","message":"Request completed","method":"POST","url":"/auth/register","status":504,"duration":55820,"ip":"127.0.0.1","userAgent":"PostmanRuntime/7.45.0"}
+{"timestamp":"2025-09-06T17:23:10.977Z","level":"info","service":"middleware-factory","message":"Request completed","method":"POST","url":"/auth/auth/register","status":504,"duration":31008,"ip":"127.0.0.1","userAgent":"PostmanRuntime/7.45.0"}
+{"timestamp":"2025-09-06T17:24:19.804Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T17:24:19.818Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:24:19.819Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T17:24:19.820Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T17:24:19.821Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T17:24:19.822Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T17:24:19.979Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T17:25:37.048Z","level":"info","service":"middleware-factory","message":"Request completed","method":"GET","url":"/auth/google","status":302,"duration":38,"ip":"127.0.0.1","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome"}
+{"timestamp":"2025-09-06T17:26:14.039Z","level":"info","service":"middleware-factory","message":"Request completed","method":"GET","url":"/auth/google","status":302,"duration":6,"ip":"127.0.0.1","userAgent":"PostmanRuntime/7.45.0"}
+{"timestamp":"2025-09-06T17:26:56.516Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T17:26:56.534Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:26:56.538Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T17:26:56.540Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T17:26:56.541Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T17:26:56.542Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T17:26:56.768Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T17:27:15.527Z","level":"info","service":"middleware-factory","message":"Request completed","method":"POST","url":"/auth/auth/register","status":404,"duration":69,"ip":"127.0.0.1","userAgent":"PostmanRuntime/7.45.0"}
+{"timestamp":"2025-09-06T17:27:19.750Z","level":"info","service":"middleware-factory","message":"Request completed","method":"POST","url":"/auth/register","status":400,"duration":11,"ip":"127.0.0.1","userAgent":"PostmanRuntime/7.45.0"}
+{"timestamp":"2025-09-06T17:28:40.407Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T17:28:40.419Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:28:40.419Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T17:28:40.420Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T17:28:40.421Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T17:28:40.422Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T17:28:40.500Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T17:29:06.376Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T17:29:06.401Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:29:06.407Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T17:29:06.408Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T17:29:06.409Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T17:29:06.411Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T17:29:06.587Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T17:29:22.698Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T17:29:22.714Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:29:22.716Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T17:29:22.719Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T17:29:22.723Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T17:29:22.725Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T17:29:22.826Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T17:29:24.687Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T17:29:24.697Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:29:24.698Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T17:29:24.699Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T17:29:24.699Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T17:29:24.700Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T17:29:24.782Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T17:29:32.246Z","level":"info","service":"middleware-factory","message":"Request completed","method":"POST","url":"/auth/login","status":401,"duration":574,"ip":"127.0.0.1","userAgent":"PostmanRuntime/7.45.0"}
+{"timestamp":"2025-09-06T17:29:49.525Z","level":"info","service":"middleware-factory","message":"Request completed","method":"POST","url":"/mfa/setup","status":500,"duration":3,"ip":"127.0.0.1","userAgent":"PostmanRuntime/7.45.0"}
+{"timestamp":"2025-09-06T17:31:20.546Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T17:31:20.567Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:31:20.569Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T17:31:20.570Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T17:31:20.571Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T17:31:20.606Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T17:31:20.720Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}
+{"timestamp":"2025-09-06T17:31:37.137Z","level":"warn","service":"error-handler","message":"Route not found","url":"/mfa/setup"}
+{"timestamp":"2025-09-06T17:31:37.146Z","level":"info","service":"middleware-factory","message":"Request completed","method":"POST","url":"/","status":404,"duration":30,"ip":"127.0.0.1","userAgent":"PostmanRuntime/7.45.0"}
+{"timestamp":"2025-09-06T17:31:51.749Z","level":"info","service":"middleware-factory","message":"Request completed","method":"POST","url":"/auth/mfa/setup","status":404,"duration":28,"ip":"127.0.0.1","userAgent":"PostmanRuntime/7.45.0"}
+{"timestamp":"2025-09-06T17:32:01.763Z","level":"info","service":"config-factory","message":"Configuration loaded","port":3000,"environment":"development"}
+{"timestamp":"2025-09-06T17:32:01.770Z","level":"info","service":"service-factory","message":"Service registered","name":"auth","url":"http://localhost:4001"}
+{"timestamp":"2025-09-06T17:32:01.771Z","level":"info","service":"service-factory","message":"Service registered","name":"address","url":"http://localhost:4005"}
+{"timestamp":"2025-09-06T17:32:01.771Z","level":"info","service":"service-factory","message":"Service registered","name":"inventory","url":"http://localhost:4002"}
+{"timestamp":"2025-09-06T17:32:01.772Z","level":"info","service":"service-factory","message":"Service registered","name":"order","url":"http://localhost:4003"}
+{"timestamp":"2025-09-06T17:32:01.772Z","level":"info","service":"service-factory","message":"Service registered","name":"notification","url":"http://localhost:4004"}
+{"timestamp":"2025-09-06T17:32:01.841Z","level":"info","service":"api-gateway","message":"Server started","serviceName":"API Gateway","port":3000,"host":"0.0.0.0","environment":"development"}

@@ -1,11 +1,13 @@
+// Legacy file - configuration now handled by ConfigFactory
+// This file is kept for backward compatibility
 export const services = {
   auth: {
-    url: process.env.AUTH_SERVICE_URL || 'http://localhost:4000',
+    url: process.env.AUTH_SERVICE_URL || 'http://localhost:4001',
     routes: ['/auth']
   },
   address: {
-    url: process.env.ADDRESS_SERVICE_URL || 'http://localhost:4001',
-    routes: ['/api/users/:userId/addresses']
+    url: process.env.ADDRESS_SERVICE_URL || 'http://localhost:4005',
+    routes: ['/addresses']
   },
   inventory: {
     url: process.env.INVENTORY_SERVICE_URL || 'http://localhost:4002',
